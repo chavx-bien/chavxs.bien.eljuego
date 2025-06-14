@@ -1,0 +1,4 @@
+*.git
+*.import
+.gitignore
+*.gitattributes
