@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf60kam87qyw0"]
+
+[ext_resource type="PackedScene" uid="uid://us211skwr1d4" path="res://escenas/Player.tscn" id="1_odl16"]
+[ext_resource type="Texture2D" uid="uid://1d4ru5fwweaw" path="res://objetos/bacardi.png" id="2_4j4b0"]
+
+[node name="Chavxs" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_odl16")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(5, 5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-102, 14)
+scale = Vector2(0.475, 0.475)
+texture = ExtResource("2_4j4b0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-170, -93)
+scale = Vector2(0.475, 0.475)
+texture = ExtResource("2_4j4b0")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(135, -58)
+scale = Vector2(0.475, 0.475)
+texture = ExtResource("2_4j4b0")
