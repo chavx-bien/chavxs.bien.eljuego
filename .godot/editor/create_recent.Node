@@ -1,4 +1,6 @@
-Sprite2D
-AnimationTree
 AnimationPlayer
+Sprite2D
+WorldEnvironment
+TileMapLayer
+AnimationTree
 CharacterBody2D

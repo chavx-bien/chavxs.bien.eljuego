@@ -1,15 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1750130811
+::res://::1750298613
 default_env.tres::Environment/Environment::-1::1750121600::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile/TextFile::-1::1750120430::0::1::::<><><>0<>0<><>::
 icon.png::CompressedTexture2D/CompressedTexture2D::7405325459936301851::1750120430::1750121839::1::::<><><>0<>0<>abd64c47e9f794596d8e863e8cd3151b<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
-::res://escenas/::1750131088
-Chavxs.tscn::PackedScene::5189317098790869765::1750131088::0::1::::<><><>0<>0<><>::uid://us211skwr1d4::::res://escenas/Player.tscn<>uid://1d4ru5fwweaw::::res://objetos/bacardi.png
-laberinto.gd::GDScript/GDScript::5393543073560729046::1750120430::0::1::::<>Node2D<><>0<>0<><>::
-laberinto.tscn::PackedScene::4885783382758708891::1750131087::0::1::::<><><>0<>0<><>::uid://ci3w4pttuyjl3::::res://escenas/laberinto.gd<>uid://ckd13vk15yx8m::::res://Scripts/LevelChanger.gd<>uid://cokgmwybl2xib::::res://Laberinto/tileset.png<>uid://us211skwr1d4::::res://escenas/Player.tscn<>uid://cnvpsdhvk31at::::res://escenas/Servidores.gd<>uid://c1awvimhc4dg4::::res://Laberinto/ServidoresSpritesheet.png<>uid://cngoyttjg8jul::::res://Laberinto/presX.png
-player.gd::GDScript::587841970093866946::1750130717::0::1::::<>CharacterBody2D<><>0<>0<><>::
-Player.tscn::PackedScene::1442622855677980691::1750131087::0::1::::<><><>0<>0<><>::uid://im0w3didc3rq::::res://escenas/player.gd<>uid://duvvgldekv1hg::::res://objetos/Sprite-Sheet-Final.png
-Servidores.gd::GDScript/GDScript::5729591336049982683::1750120430::0::1::::<>Area2D<><>0<>0<><>::
+::res://escenas/::1750300858
+Chavxs.tscn::PackedScene::5189317098790869765::1750300858::0::1::::<><><>0<>0<><>::uid://bsucs8uwaob3n::::res://Scripts/Mar2.gdshader<>uid://us211skwr1d4::::res://escenas/Player.tscn<>uid://di3mby3x5xj3i::::res://objetos/Tilesets/Pisos.png<>uid://1d4ru5fwweaw::::res://objetos/bacardi.png<>uid://f6lk1ktif5gq::::res://objetos/items/BACARDI.png<>uid://cbhxj30vey6hs::::res://objetos/Tilesets/white.png<>uid://b5twspphufl6j::::res://objetos/palmera.png<>uid://dhq6hxb7m22ll::::res://objetos/items/VASO.png<>uid://r84xlncl7qsq::::res://objetos/items/HIELO.png<>uid://blwjrowwytwcn::::res://objetos/items/MINERAL.png<>uid://c4tqdctmxfiwf::::res://Scripts/ItemAnimation.gd<>uid://4kk66umbowhf::::res://objetos/items/COCA.png
+laberinto.tscn::PackedScene::4885783382758708891::1750300858::0::1::::<><><>0<>0<><>::uid://ci3w4pttuyjl3::::res://Scripts/laberinto.gd<>uid://ckd13vk15yx8m::::res://Scripts/LevelChanger.gd<>uid://cokgmwybl2xib::::res://Laberinto/tileset.png<>uid://us211skwr1d4::::res://escenas/Player.tscn<>uid://cnvpsdhvk31at::::res://Scripts/Servidores.gd<>uid://c1awvimhc4dg4::::res://Laberinto/ServidoresSpritesheet.png<>uid://cngoyttjg8jul::::res://Laberinto/presX.png
+Player.tscn::PackedScene::1442622855677980691::1750300858::0::1::::<><><>0<>0<><>::uid://im0w3didc3rq::::res://Scripts/player.gd<>uid://duvvgldekv1hg::::res://objetos/Sprite-Sheet-Final.png
 ::res://exports/::1750120430
 ::res://exports/web/::1750121839
 chavxs bien II.144x144.png::CompressedTexture2D/CompressedTexture2D::5744310419461885807::1750120430::1750121839::1::::<><><>0<>0<>58f15a43b32d20be6473ee7b55c3facf<>res://.godot/imported/chavxs bien II.144x144.png-d4200554ec0045b657c2dbb89c23957d.ctex::
@@ -24,13 +21,29 @@ fantasma.png::CompressedTexture2D/CompressedTexture2D::4030235385001394170::1750
 presX.png::CompressedTexture2D/CompressedTexture2D::5698576525870611359::1750120430::1750121839::1::::<><><>0<>0<>4cc0a04089bbc134e3c8681ee6f0d7c0<>res://.godot/imported/presX.png-1a788c49304bc503e3528251c7833194.ctex::
 ServidoresSpritesheet.png::CompressedTexture2D/CompressedTexture2D::6599125016534227421::1750120430::1750121839::1::::<><><>0<>0<>5970fc49ba14c3f7dd728e074b5c2975<>res://.godot/imported/ServidoresSpritesheet.png-eba1a87d1d1ed71ad61f8746789edaaf.ctex::
 tileset.png::CompressedTexture2D/CompressedTexture2D::5776515879992943125::1750120430::1750121839::1::::<><><>0<>0<>efb4f81dfed58a331419dd3aef331b69<>res://.godot/imported/tileset.png-83f03190d707c83a4c31e2e2b506d179.ctex::
-::res://objetos/::1750131219
-05 comunicación fantasma 2.wav::AudioStreamWAV/AudioStreamWAV::6902259417737735301::1750120430::1750131260::1::::<><><>0<>0<>117c350b91810ef8e45f77bdc4002ea4<>res://.godot/imported/05 comunicación fantasma 2.wav-eb3b87d257f9cc7cdcdab320e009a0ec.sample::
-bacardi.png::CompressedTexture2D::1832895316206213206::1750131019::1750131022::1::::<><><>0<>0<>19dba6dd90aef06de380ecd21f9b4f5e<>res://.godot/imported/bacardi.png-3ff67aded035927268931260c92e3b0a.ctex::
-Sprite Sheet Final.png::CompressedTexture2D/CompressedTexture2D::1737390402533619759::1750126918::1750126995::1::::<><><>0<>0<>77366e95a30d51854313db56e5d8ec40<>res://.godot/imported/Sprite Sheet Final.png-af2c7158431b7b74991e3bbf9372b653.ctex::
+::res://objetos/::1750301478
+05 comunicación fantasma 2.wav::AudioStreamWAV/AudioStreamWAV::6902259417737735301::1750120430::1750301869::1::::<><><>0<>0<>117c350b91810ef8e45f77bdc4002ea4<>res://.godot/imported/05 comunicación fantasma 2.wav-eb3b87d257f9cc7cdcdab320e009a0ec.sample::
+bacardi.png::CompressedTexture2D/CompressedTexture2D::1832895316206213206::1750131019::1750131022::1::::<><><>0<>0<>19dba6dd90aef06de380ecd21f9b4f5e<>res://.godot/imported/bacardi.png-3ff67aded035927268931260c92e3b0a.ctex::
+palmera.png::CompressedTexture2D/CompressedTexture2D::4532677899659662043::1750269597::1750297401::1::::<><><>0<>0<>28bc1d5838f06643820042b167dd4809<>res://.godot/imported/palmera.png-16366d3f8fcb38125f1c2dd3a627a9c8.ctex::
 Sprite-Sheet-Final.png::CompressedTexture2D/CompressedTexture2D::8607677210873956836::1750127121::1750127124::1::::<><><>0<>0<>c093cb36e1164d3c284528b46e56b47c<>res://.godot/imported/Sprite-Sheet-Final.png-080e9b3be2638a83c5ebc185884de7a2.ctex::
+::res://objetos/items/::1750283991
+BACARDI.png::CompressedTexture2D/CompressedTexture2D::415627055354838108::1750283976::1750283991::1::::<><><>0<>0<>2ef6d74fdd7b7859681cd526d81f182d<>res://.godot/imported/BACARDI.png-356763de5c2c67320507590495027d29.ctex::
+COCA.png::CompressedTexture2D/CompressedTexture2D::2056784432249333451::1750283976::1750283991::1::::<><><>0<>0<>44c0585deb77d05cb188f61079b9f607<>res://.godot/imported/COCA.png-597e1dbf683578afa3514c14db89d8fc.ctex::
+HIELO.png::CompressedTexture2D/CompressedTexture2D::1263137271726719588::1750283976::1750283991::1::::<><><>0<>0<>d92797aba80bbecf7966d3b212d24c3c<>res://.godot/imported/HIELO.png-249eff2ab6cd610b26796346cf86e65e.ctex::
+MINERAL.png::CompressedTexture2D/CompressedTexture2D::3204491856077076609::1750283976::1750283991::1::::<><><>0<>0<>02148dccddbf11f2975cc0d6feb1e3c2<>res://.godot/imported/MINERAL.png-02ef32e804e91e57a40cec71dc91c7bb.ctex::
+VASO.png::CompressedTexture2D/CompressedTexture2D::7685509938996501061::1750283976::1750283991::1::::<><><>0<>0<>2ed9483bd8f94c3b5229cd9b3be31480<>res://.godot/imported/VASO.png-2d948ede41fd7ae166c884243b35afcb.ctex::
 ::res://objetos/otf/::1750120430
 spaceRegular.tres::FontFile/FontFile::-1::1750120430::0::1::::<><><>0<>0<><>::res://objetos/otf/SpaceGrotesk-Regular.otf
-::res://Scripts/::1750121838
+::res://objetos/Tilesets/::1750297180
+Pisos.png::CompressedTexture2D/CompressedTexture2D::7779307071905285724::1750297179::1750297180::1::::<><><>0<>0<>ae87bda1256b363496ba210a53e3ce02<>res://.godot/imported/Pisos.png-fbd1179d11fc9deb2e3a9618f22f3de2.ctex::
+white.png::CompressedTexture2D/CompressedTexture2D::4858894928515808732::1750273285::1750292740::1::::<><><>0<>0<>053be4b482d30b3800705eee736f4805<>res://.godot/imported/white.png-f686f387fef8c3b604d866f745bfc81e.ctex::
+::res://Scripts/::1750300858
+ItemAnimation.gd::GDScript::6848517974456406633::1750298083::0::1::::<>AnimationPlayer<><>0<>0<><>::
+laberinto.gd::GDScript/GDScript::5393543073560729046::1750120430::0::1::::<>Node2D<><>0<>0<><>::
 LevelChanger.gd::GDScript/GDScript::5482552700730749738::1750120430::0::1::::<>Node<><>0<>0<><>::
+Mar2.gdshader::Shader::3691262767701475321::1750300858::0::1::::<><><>0<>0<><>::
+Mar.gdshader::Shader::7893093470216065258::1750300858::0::1::::<><><>0<>0<><>::
+player.gd::GDScript/GDScript::587841970093866946::1750130717::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ScenePaths.gd::GDScript/GDScript::3824367077655163045::1750120430::0::1::::<>Node<><>0<>0<><>::
+Servidores.gd::GDScript/GDScript::5729591336049982683::1750120430::0::1::::<>Area2D<><>0<>0<><>::
+Water.gdshader::Shader::4075256775678951726::1750300858::0::1::::<><><>0<>0<><>::

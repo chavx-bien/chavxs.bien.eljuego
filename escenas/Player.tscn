@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://us211skwr1d4"]
 
-[ext_resource type="Script" uid="uid://im0w3didc3rq" path="res://escenas/player.gd" id="2"]
+[ext_resource type="Script" uid="uid://im0w3didc3rq" path="res://Scripts/player.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://duvvgldekv1hg" path="res://objetos/Sprite-Sheet-Final.png" id="2_kclba"]
 
 [sub_resource type="RectangleShape2D" id="1"]
