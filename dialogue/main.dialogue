@@ -1,0 +1,6 @@
+~ start
+Presiona los textos con el mouse o tu dedo
+Utiliza las teclas WASD para moverte si estás en la compu
+Presiona las flechas si estás en tu cel
+do get_tree().change_scene_to_file("res://escenas/Chavxs.tscn")
+=> END

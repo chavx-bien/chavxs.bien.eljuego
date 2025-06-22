@@ -1,10 +1,10 @@
 [gd_scene load_steps=31 format=3 uid="uid://cbuyeydkbti0b"]
 
-[ext_resource type="Script" uid="uid://ci3w4pttuyjl3" path="res://escenas/laberinto.gd" id="1_vam6w"]
+[ext_resource type="Script" uid="uid://ci3w4pttuyjl3" path="res://Scripts/laberinto.gd" id="1_vam6w"]
 [ext_resource type="Script" uid="uid://ckd13vk15yx8m" path="res://Scripts/LevelChanger.gd" id="2_1v0yi"]
 [ext_resource type="Texture2D" uid="uid://cokgmwybl2xib" path="res://Laberinto/tileset.png" id="3_8x4kk"]
 [ext_resource type="PackedScene" uid="uid://us211skwr1d4" path="res://escenas/Player.tscn" id="4_12mhv"]
-[ext_resource type="Script" uid="uid://cnvpsdhvk31at" path="res://escenas/Servidores.gd" id="5_v4ule"]
+[ext_resource type="Script" uid="uid://cnvpsdhvk31at" path="res://Scripts/Servidores.gd" id="5_v4ule"]
 [ext_resource type="Texture2D" uid="uid://c1awvimhc4dg4" path="res://Laberinto/ServidoresSpritesheet.png" id="6_b0w4u"]
 [ext_resource type="Texture2D" uid="uid://cngoyttjg8jul" path="res://Laberinto/presX.png" id="7_qms7w"]
 
@@ -659,7 +659,7 @@ hframes = 6
 
 [node name="presX" type="Sprite2D" parent="Servidores/Sprite"]
 visible = false
-position = Vector2(-55.6927, 5.43798)
+position = Vector2(-55.6929, 6.88728)
 scale = Vector2(0.110211, 0.110211)
 texture = ExtResource("7_qms7w")
 

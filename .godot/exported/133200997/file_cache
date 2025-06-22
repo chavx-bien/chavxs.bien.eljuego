@@ -1,0 +1,11 @@
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn::51edec98fd33c6a27b6194333f70e006::1750626409::res://.godot/exported/133200997/export-57fc9b32a4ae3d4a3041b46baf4b8f92-example_balloon.scn
+res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn::505cc067befdb1daaca453fd87d0a6a2::1750626409::res://.godot/exported/133200997/export-25872080cd204f02261b5746b425708f-small_example_balloon.scn
+res://addons/dialogue_manager/dialogue_label.tscn::5087c11b45dfaf8effc779674dfe11e8::1750626409::res://.godot/exported/133200997/export-e41b7d5321416240678013b406b79557-dialogue_label.scn
+res://addons/dialogue_manager/test_scene.tscn::5946a9a55ceff988ba46e7f734ff0538::1750626409::res://.godot/exported/133200997/export-74a175fe1e216df3bdf79c5c27a2ac2c-test_scene.scn
+res://escenas/Chavxs.tscn::9782305e204f347cafa60534ea06a164::1750627421::res://.godot/exported/133200997/export-637c2f578195dc075adb569945776223-Chavxs.scn
+res://escenas/laberinto.tscn::7111ef0dd34656e759b44ecf5662f8af::1750626433::res://.godot/exported/133200997/export-fd74614a92fe38a1d03684a424bcc4e6-laberinto.scn
+res://escenas/Menu.tscn::679710d026bd51627e320fe6260852e4::1750626483::res://.godot/exported/133200997/export-897a1518a2aca9cd83fdd819d3522772-Menu.scn
+res://escenas/Outro.tscn::209a755b11264beab07eaa0118e7754e::1750626483::res://.godot/exported/133200997/export-d0e6599176978e61f87e97fd09fb864c-Outro.scn
+res://escenas/Player.tscn::bc06065501751554f15fd149de517411::1750626483::res://.godot/exported/133200997/export-49bf1799fc3244da1519d722659f5e21-Player.scn
+res://objetos/otf/spaceRegular.tres::d60727476367a2b7729daf5c29b8eb50::1750626434::res://.godot/exported/133200997/export-9a22cc635391491b7aa2286642d13a82-spaceRegular.res
+res://default_env.tres::756de160834ef7cc033c2a79cd80f338::1750626432::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
