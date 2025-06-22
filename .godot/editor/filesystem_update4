@@ -1,6 +1,9 @@
-res://escenas/Chavxs.tscn
+res://escenas/Menu.tscn
 res://Scripts/Mar2.gdshader
 res://Scripts/Mar.gdshader
 res://Scripts/Water.gdshader
-res://escenas/laberinto.tscn
 res://escenas/Player.tscn
+res://escenas/Chavxs.tscn
+res://escenas/Outro.tscn
+res://escenas/menu.gd
+res://escenas/outro.gd

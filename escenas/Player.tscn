@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://us211skwr1d4"]
+[gd_scene load_steps=29 format=3 uid="uid://us211skwr1d4"]
 
 [ext_resource type="Script" uid="uid://im0w3didc3rq" path="res://Scripts/player.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://duvvgldekv1hg" path="res://objetos/Sprite-Sheet-Final.png" id="2_kclba"]
+[ext_resource type="Texture2D" uid="uid://bsn4sdjeobfer" path="res://objetos/flecha.png" id="3_v37hv"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(13.8993, 10.3736)
+size = Vector2(27, 40)
 
 [sub_resource type="Animation" id="Animation_322ac"]
 resource_name = "Down"
@@ -189,6 +190,8 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_eywmv")
 states/Walk/position = Vector2(588, 203)
 transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_kclba"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_v37hv"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_322ac")]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_322ac"]
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("2")
 
@@ -199,8 +202,9 @@ hframes = 18
 vframes = 5
 frame = 18
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.446304, 4.90937)
+[node name="Player" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 15)
+scale = Vector2(1.00755, 1)
 shape = SubResource("1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -215,3 +219,31 @@ parameters/conditions/is_moving = false
 parameters/conditions/not_moving = false
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="Up" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(-8, 50)
+texture_normal = ExtResource("3_v37hv")
+action = "atras"
+
+[node name="Down" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(8, 100)
+rotation = -3.14159
+texture_normal = ExtResource("3_v37hv")
+action = "adelante"
+
+[node name="Right" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(27, 67)
+rotation = 1.5708
+texture_normal = ExtResource("3_v37hv")
+shape = SubResource("RectangleShape2D_322ac")
+action = "der"
+
+[node name="Left" type="TouchScreenButton" parent="."]
+texture_filter = 1
+position = Vector2(-26, 83)
+rotation = -1.5708
+texture_normal = ExtResource("3_v37hv")
+action = "izq"

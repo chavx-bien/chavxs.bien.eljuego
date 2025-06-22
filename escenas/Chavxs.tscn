@@ -1,20 +1,36 @@
-[gd_scene load_steps=22 format=4 uid="uid://cf60kam87qyw0"]
+[gd_scene load_steps=32 format=4 uid="uid://cf60kam87qyw0"]
 
+[ext_resource type="Script" uid="uid://cs32erlrwom86" path="res://escenas/game_manager.gd" id="1_ce5gn"]
 [ext_resource type="Shader" uid="uid://bsucs8uwaob3n" path="res://Scripts/Mar2.gdshader" id="1_nd4hs"]
 [ext_resource type="PackedScene" uid="uid://us211skwr1d4" path="res://escenas/Player.tscn" id="1_odl16"]
 [ext_resource type="Texture2D" uid="uid://di3mby3x5xj3i" path="res://objetos/Tilesets/Pisos.png" id="1_umunj"]
-[ext_resource type="Texture2D" uid="uid://1d4ru5fwweaw" path="res://objetos/bacardi.png" id="2_4j4b0"]
+[ext_resource type="FontFile" uid="uid://bbb8bss2d7bk6" path="res://objetos/otf/PF Pixelscript Pro Regular.ttf" id="2_xxq0m"]
 [ext_resource type="Texture2D" uid="uid://f6lk1ktif5gq" path="res://objetos/items/BACARDI.png" id="3_e71b2"]
 [ext_resource type="Texture2D" uid="uid://cbhxj30vey6hs" path="res://objetos/Tilesets/white.png" id="3_p6pmr"]
 [ext_resource type="Texture2D" uid="uid://b5twspphufl6j" path="res://objetos/palmera.png" id="4_nd4hs"]
 [ext_resource type="Texture2D" uid="uid://dhq6hxb7m22ll" path="res://objetos/items/VASO.png" id="4_umunj"]
 [ext_resource type="Texture2D" uid="uid://r84xlncl7qsq" path="res://objetos/items/HIELO.png" id="5_excta"]
+[ext_resource type="Script" uid="uid://d26nyxsvide4u" path="res://escenas/Items.gd" id="6_bg6or"]
 [ext_resource type="Texture2D" uid="uid://blwjrowwytwcn" path="res://objetos/items/MINERAL.png" id="6_p6pmr"]
 [ext_resource type="Script" uid="uid://c4tqdctmxfiwf" path="res://Scripts/ItemAnimation.gd" id="7_2xy5j"]
 [ext_resource type="Texture2D" uid="uid://4kk66umbowhf" path="res://objetos/items/COCA.png" id="7_nd4hs"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_jdofs"]
+font = ExtResource("2_xxq0m")
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ce5gn"]
+
+[sub_resource type="Sky" id="Sky_xxq0m"]
+sky_material = SubResource("PhysicalSkyMaterial_ce5gn")
+
 [sub_resource type="Environment" id="Environment_2xy5j"]
 background_mode = 3
+sky = SubResource("Sky_xxq0m")
+ambient_light_energy = 1.92
+reflected_light_source = 2
 glow_enabled = true
 glow_intensity = 3.65
 glow_strength = 1.02
@@ -123,9 +139,14 @@ shader_parameter/sinpowder = 8.0
 texture = ExtResource("4_nd4hs")
 0:0/size_in_atlas = Vector2i(5, 7)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.88852, -8, 11.0613, -8.81308, 9.44258, 46.4035, -0.269791, 46.9431)
 
 [sub_resource type="TileSet" id="TileSet_bg6or"]
+physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_2xy5j")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bg6or"]
+size = Vector2(12, 28)
 
 [sub_resource type="Animation" id="Animation_2xy5j"]
 length = 0.001
@@ -252,7 +273,43 @@ _data = {
 &"UpDown": SubResource("Animation_bg6or")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxq0m"]
+size = Vector2(34.0771, 38.6207)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jdofs"]
+size = Vector2(9.08722, 31.8053)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwokv"]
+size = Vector2(9.08725, 31.8053)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ctoe"]
+
 [node name="Chavxs" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_ce5gn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
+
+[node name="CoinsLabel" type="Label" parent="GameManager/CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -131.0
+offset_top = 20.0
+offset_right = 131.0
+offset_bottom = 52.0
+grow_horizontal = 2
+text = "Ingredientes 0"
+label_settings = SubResource("LabelSettings_jdofs")
+horizontal_alignment = 1
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+scale = Vector2(0.999375, 1)
+color = Color(0.749354, 0, 0.346576, 1)
+energy = 0.54
+blend_mode = 2
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2xy5j")
@@ -279,39 +336,24 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAD1//n/AQAAAAAAAADZ////AQAAAAAAAADV/+z/AQAAAAAAAADv/+X/AQAAAAAAAAAQAPH/AQAAAAAAAAAZAAMAAQAAAAAAAAAFAAsAAQAAAAAAAAD5/wwAAQAAAAAAAADL//T/AQAAAAAAAAA=")
 tile_set = SubResource("TileSet_bg6or")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(-102, 14)
-scale = Vector2(0.475, 0.475)
-texture = ExtResource("2_4j4b0")
+[node name="Bacardi" type="Area2D" parent="."]
+script = ExtResource("6_bg6or")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(-170, -93)
-scale = Vector2(0.475, 0.475)
-texture = ExtResource("2_4j4b0")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bacardi"]
+position = Vector2(153, -66)
+shape = SubResource("RectangleShape2D_bg6or")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(135, -58)
-scale = Vector2(0.475, 0.475)
-texture = ExtResource("2_4j4b0")
-
-[node name="Bacardi" type="Sprite2D" parent="."]
+[node name="Bacardi" type="Sprite2D" parent="Bacardi"]
 self_modulate = Color(2.21, 8.287, 12.154, 1)
 texture_filter = 1
 position = Vector2(153, -66)
 scale = Vector2(0.880357, 0.880357)
 texture = ExtResource("3_e71b2")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bacardi"]
-scale = Vector2(1, 1)
+[node name="Sprite2D" type="Sprite2D" parent="Bacardi/Bacardi"]
 texture = ExtResource("3_e71b2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Bacardi/Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bacardi/Bacardi/Sprite2D"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_bg6or")
@@ -319,18 +361,20 @@ libraries = {
 autoplay = "UpDown"
 script = ExtResource("7_2xy5j")
 
-[node name="Hielo" type="Sprite2D" parent="."]
+[node name="Hielo" type="Area2D" parent="."]
+script = ExtResource("6_bg6or")
+
+[node name="Hielo" type="Sprite2D" parent="Hielo"]
 self_modulate = Color(2.21, 8.287, 12.154, 1)
 texture_filter = 1
 position = Vector2(-768, -80)
 scale = Vector2(0.880357, 0.880357)
 texture = ExtResource("5_excta")
 
-[node name="Sprite2D" type="Sprite2D" parent="Hielo"]
-scale = Vector2(1, 1)
+[node name="Sprite2D" type="Sprite2D" parent="Hielo/Hielo"]
 texture = ExtResource("5_excta")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Hielo/Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hielo/Hielo/Sprite2D"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_bg6or")
@@ -338,18 +382,25 @@ libraries = {
 autoplay = "UpDown"
 script = ExtResource("7_2xy5j")
 
-[node name="Mineral" type="Sprite2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hielo"]
+position = Vector2(-768, -81)
+scale = Vector2(0.880358, 0.880358)
+shape = SubResource("RectangleShape2D_xxq0m")
+
+[node name="Mineral" type="Area2D" parent="."]
+script = ExtResource("6_bg6or")
+
+[node name="Mineral" type="Sprite2D" parent="Mineral"]
 self_modulate = Color(2.21, 8.287, 12.154, 1)
 texture_filter = 1
 position = Vector2(-39, -234)
 scale = Vector2(0.880357, 0.880357)
 texture = ExtResource("6_p6pmr")
 
-[node name="Sprite2D" type="Sprite2D" parent="Mineral"]
-scale = Vector2(1, 1)
+[node name="Sprite2D" type="Sprite2D" parent="Mineral/Mineral"]
 texture = ExtResource("6_p6pmr")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Mineral/Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Mineral/Mineral/Sprite2D"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_bg6or")
@@ -357,18 +408,25 @@ libraries = {
 autoplay = "UpDown"
 script = ExtResource("7_2xy5j")
 
-[node name="Coca" type="Sprite2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mineral"]
+position = Vector2(-39, -234)
+scale = Vector2(0.880357, 0.880357)
+shape = SubResource("RectangleShape2D_jdofs")
+
+[node name="Coca" type="Area2D" parent="."]
+script = ExtResource("6_bg6or")
+
+[node name="Coca" type="Sprite2D" parent="Coca"]
 self_modulate = Color(2.21, 8.287, 12.154, 1)
 texture_filter = 1
 position = Vector2(551, -100)
 scale = Vector2(0.880357, 0.880357)
 texture = ExtResource("7_nd4hs")
 
-[node name="Sprite2D" type="Sprite2D" parent="Coca"]
-scale = Vector2(1, 1)
+[node name="Sprite2D" type="Sprite2D" parent="Coca/Coca"]
 texture = ExtResource("7_nd4hs")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Coca/Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Coca/Coca/Sprite2D"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_bg6or")
@@ -376,24 +434,43 @@ libraries = {
 autoplay = "UpDown"
 script = ExtResource("7_2xy5j")
 
-[node name="Vaso" type="Sprite2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coca"]
+position = Vector2(551, -100)
+scale = Vector2(0.880357, 0.880357)
+shape = SubResource("RectangleShape2D_uwokv")
+
+[node name="Vaso" type="Area2D" parent="."]
+script = ExtResource("6_bg6or")
+
+[node name="Vaso" type="Sprite2D" parent="Vaso"]
 self_modulate = Color(2.21, 8.287, 12.154, 1)
 texture_filter = 1
 position = Vector2(-324, -1)
 scale = Vector2(0.880357, 0.880357)
 texture = ExtResource("4_umunj")
 
-[node name="Sprite2D" type="Sprite2D" parent="Vaso"]
+[node name="Sprite2D" type="Sprite2D" parent="Vaso/Vaso"]
 texture = ExtResource("4_umunj")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Vaso/Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Vaso/Vaso/Sprite2D"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_bg6or")
 }
 autoplay = "UpDown"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vaso"]
+position = Vector2(-324, -1)
+scale = Vector2(0.87246, 0.880357)
+shape = SubResource("RectangleShape2D_2ctoe")
+
 [node name="Player" parent="." instance=ExtResource("1_odl16")]
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(3, 3)
+
+[connection signal="body_entered" from="Bacardi" to="Bacardi" method="_on_body_entered"]
+[connection signal="body_entered" from="Hielo" to="Hielo" method="_on_body_entered"]
+[connection signal="body_entered" from="Mineral" to="Mineral" method="_on_body_entered"]
+[connection signal="body_entered" from="Coca" to="Coca" method="_on_body_entered"]
+[connection signal="body_entered" from="Vaso" to="Vaso" method="_on_body_entered"]

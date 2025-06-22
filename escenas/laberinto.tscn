@@ -659,7 +659,7 @@ hframes = 6
 
 [node name="presX" type="Sprite2D" parent="Servidores/Sprite"]
 visible = false
-position = Vector2(-55.6927, 5.43798)
+position = Vector2(-55.6929, 6.88728)
 scale = Vector2(0.110211, 0.110211)
 texture = ExtResource("7_qms7w")
 
