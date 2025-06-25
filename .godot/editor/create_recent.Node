@@ -1,10 +1,10 @@
+TouchScreenButton
 Button
 VBoxContainer
 MarginContainer
 Camera2D
 VideoStreamPlayer
 Sprite2D
-TouchScreenButton
 DirectionalLight2D
 CollisionShape2D
 Label
@@ -12,4 +12,3 @@ CanvasLayer
 Node
 Area2D
 AnimationPlayer
-WorldEnvironment

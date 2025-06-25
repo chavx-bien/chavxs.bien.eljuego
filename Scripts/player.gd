@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 @export var move_speed: float = 100.0
 @export var acceleration: float = 15.0
+@export var fullscreen: bool = false
 
 var movement_direction: Vector2 = Vector2.ZERO
 
@@ -27,6 +28,14 @@ func _physics_process(delta: float) -> void:
 	animation_tree["parameters/Walk/blend_position"] = movement_direction
 #var direction : Vector2 = Vector2()
 
+func _on_fullscreen_pressed():
+	if fullscreen:
+		print("fullscreen")
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	else:
+		print("window")
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	fullscreen = not fullscreen
 #func read_input():
 #	velocity = Vector2()
 	
