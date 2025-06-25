@@ -10,13 +10,20 @@ config_version=5
 
 [application]
 
-run/main_scene="uid://ptgvamh24wpg"
+run/main_scene="uid://cq41qyc7st562"
 config/features=PackedStringArray("4.4")
-config/icon="res://icon.png"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/use_filter=false
+boot_splash/image="uid://bgdhw265xvxeu"
+config/icon="uid://1d4ru5fwweaw"
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+
+[dialogue_manager]
+
+runtime/balloon_path="res://objetos/balloon.tscn"
 
 [editor_plugins]
 
@@ -115,7 +122,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-textures/vram_compression/import_etc2_astc=true
 viewport/hdr_2d=true
 2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"
