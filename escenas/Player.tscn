@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bsn4sdjeobfer" path="res://objetos/flecha.png" id="3_v37hv"]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(27, 40)
+size = Vector2(27, 55)
 
 [sub_resource type="Animation" id="Animation_322ac"]
 resource_name = "Down"
@@ -203,7 +203,7 @@ vframes = 5
 frame = 18
 
 [node name="Player" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 15)
+position = Vector2(1.5, 7.5)
 scale = Vector2(1.00755, 1)
 shape = SubResource("1")
 
@@ -222,28 +222,32 @@ parameters/Walk/blend_position = Vector2(0, 0)
 
 [node name="Up" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(-8, 50)
+position = Vector2(-16, 43)
+scale = Vector2(2, 2)
 texture_normal = ExtResource("3_v37hv")
 action = "atras"
 
 [node name="Down" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(8, 100)
+position = Vector2(16, 128)
 rotation = -3.14159
+scale = Vector2(2, 2)
 texture_normal = ExtResource("3_v37hv")
 action = "adelante"
 
 [node name="Right" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(27, 67)
+position = Vector2(59, 69)
 rotation = 1.5708
+scale = Vector2(2, 2)
 texture_normal = ExtResource("3_v37hv")
 shape = SubResource("RectangleShape2D_322ac")
 action = "der"
 
 [node name="Left" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(-26, 83)
+position = Vector2(-57, 102)
 rotation = -1.5708
+scale = Vector2(2, 2)
 texture_normal = ExtResource("3_v37hv")
 action = "izq"
