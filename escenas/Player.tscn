@@ -1,8 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://us211skwr1d4"]
+[gd_scene load_steps=30 format=3 uid="uid://us211skwr1d4"]
 
 [ext_resource type="Script" uid="uid://im0w3didc3rq" path="res://Scripts/player.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://duvvgldekv1hg" path="res://objetos/Sprite-Sheet-Final.png" id="2_kclba"]
-[ext_resource type="Texture2D" uid="uid://bsn4sdjeobfer" path="res://objetos/flecha.png" id="3_v37hv"]
+[ext_resource type="Texture2D" uid="uid://drfu38sor4qm" path="res://objetos/Sprite-Sheet-Final.png" id="2_kclba"]
+[ext_resource type="Texture2D" uid="uid://cvi6yc6latl03" path="res://objetos/flecha.png" id="3_v37hv"]
+[ext_resource type="Texture2D" uid="uid://b381u1gmpyxel" path="res://objetos/fullscreen.png" id="4_322ac"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(27, 55)
@@ -251,3 +252,10 @@ rotation = -1.5708
 scale = Vector2(2, 2)
 texture_normal = ExtResource("3_v37hv")
 action = "izq"
+
+[node name="Fullscreen" type="TouchScreenButton" parent="."]
+position = Vector2(190, 95)
+scale = Vector2(0.6875, 0.677419)
+texture_normal = ExtResource("4_322ac")
+
+[connection signal="released" from="Fullscreen" to="." method="_on_fullscreen_released"]
