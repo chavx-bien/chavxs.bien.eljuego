@@ -1,9 +1,8 @@
-res://escenas/game_manager.gd
-res://escenas/Chavxs.tscn
+res://escenas/Player.tscn
 res://Scripts/Mar2.gdshader
 res://Scripts/Mar.gdshader
 res://Scripts/Water.gdshader
-res://escenas/Player.tscn
+res://Scripts/player.gd
+res://escenas/Chavxs.tscn
 res://escenas/Outro.tscn
 res://escenas/Menu.tscn
-res://Scripts/player.gd

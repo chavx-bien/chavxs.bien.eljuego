@@ -2,3 +2,4 @@
 *.import
 .gitignore
 *.gitattributes
+.godot
