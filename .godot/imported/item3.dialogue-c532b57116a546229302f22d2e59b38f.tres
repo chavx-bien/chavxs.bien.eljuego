@@ -19,15 +19,14 @@ lines = {
 "1": {
 &"id": "1",
 &"next_id": "2",
-&"text": "item3",
+&"text": "será que toda esta destrucción es tan solo una metáfora de lo que sucede dentro de mi jodido mundo interno?",
 &"type": "dialogue"
 },
 "2": {
 &"id": "2",
-&"is_snippet": false,
-&"next_id": "end",
-&"next_id_after": "",
-&"type": "goto"
+&"next_id": "3",
+&"text": "nah no creo",
+&"type": "dialogue"
 },
 "3": {
 &"id": "3",
@@ -35,9 +34,17 @@ lines = {
 &"next_id": "end",
 &"next_id_after": "",
 &"type": "goto"
+},
+"4": {
+&"id": "4",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
 }
 }
 raw_text = "~ start
-item3
+será que toda esta destrucción es tan solo una metáfora de lo que sucede dentro de mi jodido mundo interno?
+nah no creo
 => END"
 metadata/dialogue_manager_version = "3.7.1"

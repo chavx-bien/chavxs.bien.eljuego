@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://us211skwr1d4"]
+[gd_scene load_steps=35 format=3 uid="uid://us211skwr1d4"]
 
 [ext_resource type="Script" uid="uid://im0w3didc3rq" path="res://Scripts/player.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://duvvgldekv1hg" path="res://objetos/Sprite-Sheet-Final.png" id="2_kclba"]
@@ -90,6 +90,36 @@ tracks/0/keys = {
 "values": [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]
 }
 
+[sub_resource type="Animation" id="Animation_eywmv"]
+resource_name = "Sit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.933333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [13, 14]
+}
+
+[sub_resource type="Animation" id="Animation_jjqtk"]
+resource_name = "Stand"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.00833, 1.0427, 1.07604, 1.10937, 1.1427),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [14, 13, 14, 15, 16, 17, 31, 32, 33, 34, 72, 73, 74, 75, 76]
+}
+
 [sub_resource type="Animation" id="Animation_kclba"]
 resource_name = "Up"
 length = 1.3
@@ -114,6 +144,8 @@ _data = {
 &"Left": SubResource("Animation_lhkpn"),
 &"RESET": SubResource("Animation_v37hv"),
 &"Right": SubResource("Animation_47y6d"),
+&"Sit": SubResource("Animation_eywmv"),
+&"Stand": SubResource("Animation_jjqtk"),
 &"Up": SubResource("Animation_kclba")
 }
 
@@ -149,6 +181,14 @@ blend_point_4/pos = Vector2(1, 0)
 blend_point_5/node = SubResource("AnimationNodeAnimation_aqkrn")
 blend_point_5/pos = Vector2(-0.9, 0)
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_to073"]
+animation = &"Sit"
+advance_on_start = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4a77h"]
+animation = &"Stand"
+advance_on_start = true
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_322ac"]
 animation = &"Left"
 
@@ -180,15 +220,26 @@ advance_condition = &"is_moving"
 advance_mode = 2
 advance_condition = &"not_moving"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oi66q"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hgusv"]
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_322ac"]
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_kclba"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_v37hv")
 states/Idle/position = Vector2(588, 65)
+states/Sit/node = SubResource("AnimationNodeAnimation_to073")
+states/Sit/position = Vector2(267, 65)
+states/Stand/node = SubResource("AnimationNodeAnimation_4a77h")
+states/Stand/position = Vector2(401, 119)
+states/Start/position = Vector2(126, 88)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_eywmv")
 states/Walk/position = Vector2(588, 203)
-transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_kclba"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_v37hv"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_322ac")]
+transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_kclba"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_v37hv"), "Sit", "Stand", SubResource("AnimationNodeStateMachineTransition_oi66q"), "Stand", "Idle", SubResource("AnimationNodeStateMachineTransition_hgusv"), "Start", "Sit", SubResource("AnimationNodeStateMachineTransition_322ac")]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_322ac"]
 
@@ -218,9 +269,10 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/is_moving = false
 parameters/conditions/not_moving = false
 parameters/Idle/blend_position = Vector2(0, 0)
-parameters/Walk/blend_position = Vector2(0, 0)
+parameters/Walk/blend_position = 0.00694444
 
 [node name="Up" type="TouchScreenButton" parent="."]
+modulate = Color(0, 0.897627, 0.501535, 1)
 texture_filter = 1
 position = Vector2(-16, 43)
 scale = Vector2(2, 2)
@@ -228,16 +280,18 @@ texture_normal = ExtResource("3_v37hv")
 action = "atras"
 
 [node name="Down" type="TouchScreenButton" parent="."]
+modulate = Color(0, 0.898039, 0.501961, 1)
 texture_filter = 1
-position = Vector2(16, 128)
+position = Vector2(16, 148)
 rotation = -3.14159
 scale = Vector2(2, 2)
 texture_normal = ExtResource("3_v37hv")
 action = "adelante"
 
 [node name="Right" type="TouchScreenButton" parent="."]
+modulate = Color(0, 0.898039, 0.501961, 1)
 texture_filter = 1
-position = Vector2(59, 69)
+position = Vector2(57, 79)
 rotation = 1.5708
 scale = Vector2(2, 2)
 texture_normal = ExtResource("3_v37hv")
@@ -245,8 +299,9 @@ shape = SubResource("RectangleShape2D_322ac")
 action = "der"
 
 [node name="Left" type="TouchScreenButton" parent="."]
+modulate = Color(0, 0.898039, 0.501961, 1)
 texture_filter = 1
-position = Vector2(-57, 102)
+position = Vector2(-57, 112)
 rotation = -1.5708
 scale = Vector2(2, 2)
 texture_normal = ExtResource("3_v37hv")

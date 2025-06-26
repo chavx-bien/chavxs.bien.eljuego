@@ -11,7 +11,6 @@ const DMCompiler = preload("./compiler/compiler.gd")
 const DMCompilerResult = preload("./compiler/compiler_result.gd")
 const DMResolvedLineData = preload("./compiler/resolved_line_data.gd")
 
-
 ## Emitted when a dialogue balloon is created and dialogue starts
 signal dialogue_started(resource: DialogueResource)
 

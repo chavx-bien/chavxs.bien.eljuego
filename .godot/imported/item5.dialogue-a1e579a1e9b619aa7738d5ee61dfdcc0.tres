@@ -19,18 +19,30 @@ lines = {
 "1": {
 &"id": "1",
 &"next_id": "2",
-&"text": "item5",
+&"text": "a huevo!",
 &"type": "dialogue"
 },
 "2": {
 &"id": "2",
+&"next_id": "3",
+&"text": "ahora sí, me la pela el fin del mundo",
+&"type": "dialogue"
+},
+"3": {
+&"id": "3",
+&"next_id": "4",
+&"text": "solo necesito volver a mi yate",
+&"type": "dialogue"
+},
+"4": {
+&"id": "4",
 &"is_snippet": false,
 &"next_id": "end",
 &"next_id_after": "",
 &"type": "goto"
 },
-"3": {
-&"id": "3",
+"5": {
+&"id": "5",
 &"is_snippet": false,
 &"next_id": "end",
 &"next_id_after": "",
@@ -38,6 +50,8 @@ lines = {
 }
 }
 raw_text = "~ start
-item5
+a huevo!
+ahora sí, me la pela el fin del mundo
+solo necesito volver a mi yate
 => END"
 metadata/dialogue_manager_version = "3.7.1"
