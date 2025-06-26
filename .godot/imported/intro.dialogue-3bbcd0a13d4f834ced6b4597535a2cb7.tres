@@ -38,6 +38,6 @@ lines = {
 }
 }
 raw_text = "~ start
-súbele a tus bocinas!!!!!
+   súbele a tus bocinas!!!!!
 => END"
 metadata/dialogue_manager_version = "3.7.1"

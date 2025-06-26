@@ -74,12 +74,12 @@ lines = {
 }
 }
 raw_text = "~ start
-we este ataque fue provocado por las élites tecnofeudalistas
-los dueños de las empresas tecnológicas buscan tomar el control de los gobiernos
-como no pueden utilizar las vías democráticas utilizan la fuerza
-en realidad no es tan complicado pasar de programar una red social, un videojuego o un ataque nuclear
-todo utiliza javascript...
-en fin, seguimos resistiendo compañero
-no olvides utilizar el #ChavosBien2 y compartir este juego que nos costó un vergo hacer
+   we este ataque fue provocado por las élites tecnofeudalistas
+   los dueños de las empresas tecnológicas buscan tomar el control de los gobiernos
+   como no pueden utilizar las vías democráticas utilizan la fuerza
+   en realidad no es tan complicado pasar de programar una red social, un videojuego o un ataque nuclear
+   todo utiliza javascript...
+   en fin, seguimos resistiendo compañero
+   no olvides utilizar el #ChavosBien2 y compartir este juego que nos costó un vergo hacer
 => END"
 metadata/dialogue_manager_version = "3.7.1"

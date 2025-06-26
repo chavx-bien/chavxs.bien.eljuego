@@ -50,8 +50,8 @@ lines = {
 }
 }
 raw_text = "~ start
-a huevo!
-ahora sí, me la pela el fin del mundo
-solo necesito volver a mi yate
+   a huevo!
+   ahora sí, me la pela el fin del mundo
+   solo necesito volver a mi yate
 => END"
 metadata/dialogue_manager_version = "3.7.1"
