@@ -116,6 +116,10 @@ pointing/emulate_touch_from_mouse=true
 
 locale/translations_pot_files=PackedStringArray("res://dialogue/main.dialogue", "res://dialogue/item1.dialogue", "res://dialogue/item2.dialogue", "res://dialogue/item3.dialogue", "res://dialogue/item4.dialogue", "res://dialogue/item5.dialogue", "res://item0.dialogue", "res://dialogue/npc.dialogue", "res://intro.dialogue")
 
+[navigation]
+
+3d/use_edge_connections=false
+
 [physics]
 
 common/enable_pause_aware_picking=true
@@ -123,16 +127,24 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 occlusion_culling/bvh_build_quality=0
+rendering_device/staging_buffer/max_size_mb=64
+rendering_device/pipeline_cache/enable=false
+rendering_device/pipeline_cache/save_chunk_size_mb=1.0
+rendering_device/d3d12/max_resource_descriptors_per_frame=8192
+rendering_device/d3d12/max_sampler_descriptors_per_frame=512
 rendering_device/driver.ios="vulkan"
 rendering_device/driver.macos="vulkan"
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
-textures/webp_compression/lossless_compression_factor=59.0
+textures/webp_compression/compression_method=1
+textures/webp_compression/lossless_compression_factor=20.0
 2d/shadow_atlas/size=1024
 2d/batching/item_buffer_size=8192
 2d/batching/uniform_set_cache_size=2048
+textures/default_filters/use_nearest_mipmap_filter=true
+textures/default_filters/anisotropic_filtering_level=0
 viewport/hdr_2d=true
+anti_aliasing/quality/msaa_2d=3
 environment/defaults/default_clear_color=Color(1, 1, 1, 1)
 2d/snapping/use_gpu_pixel_snap=true
 environment/default_environment="res://default_env.tres"
