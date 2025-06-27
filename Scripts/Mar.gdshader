@@ -6,7 +6,7 @@ uniform vec2 speed = vec2(0.5, 0.2);
 uniform float distortion = 0.01;
 
 void vertex() {
-
+	
 }
 
 void fragment() {
