@@ -3,6 +3,9 @@ extends Node
 var flecha = preload("res://escenas/Flechaaaa.tscn")
 var coins = 0
 @onready var coins_label = $CanvasLayer/CoinsLabel
+	
+	
+
 
 func add_coin():
 	coins += 1

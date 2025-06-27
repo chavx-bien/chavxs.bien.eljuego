@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cq41qyc7st562"]
 
-[ext_resource type="Script" uid="uid://bfbsonvx3d0p1" path="res://escenas/outro.gd" id="1_6d1dt"]
+[ext_resource type="Script" uid="uid://cjsxt4y0dusk8" path="res://escenas/intro.gd" id="1_6d1dt"]
 [ext_resource type="VideoStream" uid="uid://bqy10af5l7nir" path="res://objetos/videos/Intro.ogv" id="2_6d1dt"]
 
 [node name="Intro" type="Node2D"]

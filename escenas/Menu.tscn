@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://cyyqg0a4tjqqe"]
 
 [ext_resource type="Script" uid="uid://cc8gupgtvdshn" path="res://escenas/menu.gd" id="1_hw27t"]
-[ext_resource type="Texture2D" uid="uid://0nucid68g6t0" path="res://objetos/comenzar.png" id="2_pg16i"]
-[ext_resource type="FontFile" uid="uid://bbb8bss2d7bk6" path="res://objetos/otf/PF Pixelscript Pro Regular.ttf" id="3_gglsf"]
+[ext_resource type="Texture2D" uid="uid://bmyx8iyyl8pr2" path="res://objetos/comenzar.png" id="2_pg16i"]
+[ext_resource type="FontFile" uid="uid://bd7nph7ha0sj" path="res://objetos/otf/PF Pixelscript Pro Regular.ttf" id="3_gglsf"]
 
 [sub_resource type="Animation" id="Animation_37x5u"]
 length = 0.001

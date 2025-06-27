@@ -1,23 +1,27 @@
-[gd_scene load_steps=40 format=4 uid="uid://cf60kam87qyw0"]
+[gd_scene load_steps=47 format=4 uid="uid://cf60kam87qyw0"]
 
 [ext_resource type="Script" uid="uid://cs32erlrwom86" path="res://escenas/game_manager.gd" id="1_ce5gn"]
 [ext_resource type="Shader" uid="uid://bsucs8uwaob3n" path="res://Scripts/Mar2.gdshader" id="1_nd4hs"]
 [ext_resource type="PackedScene" uid="uid://us211skwr1d4" path="res://escenas/Player.tscn" id="1_odl16"]
-[ext_resource type="Texture2D" uid="uid://c5yscrsme454f" path="res://objetos/Tilesets/Pisos.png" id="1_umunj"]
-[ext_resource type="FontFile" uid="uid://dmj76sub0t7u7" path="res://objetos/otf/PF Pixelscript Pro Regular.ttf" id="2_xxq0m"]
-[ext_resource type="Texture2D" uid="uid://bk8dnrr6nc0wm" path="res://objetos/items/BACARDI.png" id="3_e71b2"]
-[ext_resource type="Texture2D" uid="uid://dx1pw1r6wbsyj" path="res://objetos/Tilesets/white.png" id="3_p6pmr"]
-[ext_resource type="Texture2D" uid="uid://7kpfm0to10r3" path="res://objetos/items/VASO.png" id="4_umunj"]
-[ext_resource type="Texture2D" uid="uid://dan66jdjotbau" path="res://objetos/items/HIELO.png" id="5_excta"]
+[ext_resource type="Texture2D" uid="uid://snpoat0f3plc" path="res://objetos/Tilesets/Pisos.png" id="1_umunj"]
+[ext_resource type="Script" uid="uid://bgay4yjga0jhf" path="res://escenas/harp.gd" id="2_0cow8"]
+[ext_resource type="FontFile" uid="uid://bd7nph7ha0sj" path="res://objetos/otf/PF Pixelscript Pro Regular.ttf" id="2_xxq0m"]
+[ext_resource type="Texture2D" uid="uid://0dngoq8sqnih" path="res://objetos/items/BACARDI.png" id="3_e71b2"]
+[ext_resource type="Texture2D" uid="uid://btvijsu1vl3hu" path="res://objetos/Tilesets/white.png" id="3_p6pmr"]
+[ext_resource type="Texture2D" uid="uid://bna35q8u4fq1f" path="res://objetos/items/VASO.png" id="4_umunj"]
+[ext_resource type="Texture2D" uid="uid://d37funfu5865j" path="res://objetos/items/HIELO.png" id="5_excta"]
 [ext_resource type="Script" uid="uid://d26nyxsvide4u" path="res://escenas/Items.gd" id="6_bg6or"]
-[ext_resource type="Texture2D" uid="uid://lm2mnpxj7dmt" path="res://objetos/Tilesets/tileset-256.png" id="6_ce5gn"]
-[ext_resource type="Texture2D" uid="uid://doyt01c83ckns" path="res://objetos/Tilesets/tileset-64.png" id="6_jdofs"]
-[ext_resource type="Texture2D" uid="uid://dvb37yrgst8hr" path="res://objetos/items/MINERAL.png" id="6_p6pmr"]
+[ext_resource type="Texture2D" uid="uid://buakk24o40bsv" path="res://objetos/Tilesets/tileset-256.png" id="6_ce5gn"]
+[ext_resource type="Texture2D" uid="uid://dp4uhgiomv1yg" path="res://objetos/Tilesets/tileset-64.png" id="6_jdofs"]
+[ext_resource type="Texture2D" uid="uid://bfd4ryr2fhq2s" path="res://objetos/items/MINERAL.png" id="6_p6pmr"]
 [ext_resource type="Script" uid="uid://c4tqdctmxfiwf" path="res://Scripts/ItemAnimation.gd" id="7_2xy5j"]
-[ext_resource type="Texture2D" uid="uid://cp1uygp3wk8uc" path="res://objetos/items/COCA.png" id="7_nd4hs"]
-[ext_resource type="Texture2D" uid="uid://cik7bpflcc81n" path="res://objetos/Tilesets/tileset-128.png" id="7_xxq0m"]
-[ext_resource type="Texture2D" uid="uid://u606u0s3nx7k" path="res://objetos/Yate.png" id="16_uwokv"]
-[ext_resource type="AudioStream" uid="uid://b66p3kyo8agev" path="res://objetos/Chavos Bien 8 bits.wav" id="18_2ctoe"]
+[ext_resource type="Texture2D" uid="uid://ctluvtp6vprth" path="res://objetos/items/COCA.png" id="7_nd4hs"]
+[ext_resource type="Texture2D" uid="uid://dxdm54paxmwte" path="res://objetos/Tilesets/tileset-128.png" id="7_xxq0m"]
+[ext_resource type="Script" uid="uid://6etmjkavxuo5" path="res://escenas/npc.gd" id="12_qegge"]
+[ext_resource type="Texture2D" uid="uid://c6dcqoh1lf6ua" path="res://objetos/Sprite-Sheet-Final.png" id="13_cfgnq"]
+[ext_resource type="AudioStream" uid="uid://42dvl4puceu8" path="res://objetos/harp-ascend-wind-chimes-SBA-300119887.wav" id="15_m82y5"]
+[ext_resource type="Texture2D" uid="uid://civ263t72vnfa" path="res://objetos/Yate.png" id="16_uwokv"]
+[ext_resource type="AudioStream" uid="uid://dh1x4h2vw8omm" path="res://objetos/Chavos Bien 8 bits.wav" id="18_2ctoe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jdofs"]
 font = ExtResource("2_xxq0m")
@@ -292,7 +296,7 @@ tile_size = Vector2i(32, 16)
 sources/1 = SubResource("TileSetAtlasSource_uwokv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bg6or"]
-size = Vector2(12, 28)
+size = Vector2(173, 66.5)
 
 [sub_resource type="Animation" id="Animation_2xy5j"]
 length = 0.001
@@ -419,6 +423,43 @@ _data = {
 &"UpDown": SubResource("Animation_bg6or")
 }
 
+[sub_resource type="Animation" id="Animation_m82y5"]
+resource_name = "NPC"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [49, 50, 51, 52, 53, 67, 68, 69, 70, 71]
+}
+
+[sub_resource type="Animation" id="Animation_0cow8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [49]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gp2gj"]
+_data = {
+&"NPC": SubResource("Animation_m82y5"),
+&"RESET": SubResource("Animation_0cow8")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxq0m"]
 size = Vector2(34.0771, 38.6207)
 
@@ -431,6 +472,12 @@ size = Vector2(9.08725, 31.8053)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ctoe"]
 
 [node name="Chavxs" type="Node2D"]
+
+[node name="Harp" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(254, -514)
+stream = ExtResource("15_m82y5")
+volume_db = 5.0
+script = ExtResource("2_0cow8")
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -479,7 +526,7 @@ tile_set = SubResource("TileSet_p6pmr")
 
 [node name="Escenografia" type="TileMapLayer" parent="."]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAACAPT/AwABAAQAAAD+/+7/AwACAAQAAAADAO//AwAAAAYAAAD//wMAAwAAAAYAAAD9//T/AwAAAAYAAAACAAIAAwAAAAYAAAAAAPX/AwAAAAQAAAABAOz/AwACAAQAAAACAP7/AwADAAQAAAADAAUAAwADAAQAAAAEAAQAAwADAAQAAAADAAMAAwADAAQAAAAEAAIAAwADAAQAAAADAAEAAwADAAQAAAAEAAAAAwADAAQAAAADAP//AwADAAQAAAAEAP7/AwADAAQAAAAEAPz/AwADAAQAAAADAP3/AwADAAQAAAAEAPn/AwADAAQAAAAFAPv/AwADAAQAAAAGAPz/AwADAAQAAAAHAPz/AwADAAQAAAAGAPv/AwADAAQAAAAHAPr/AwADAAQAAAAHAPn/AwADAAQAAAAHAPj/AwADAAQAAAAHAPf/AwADAAQAAAAHAPb/AwADAAQAAAAHAPX/AwADAAQAAAAIAPT/AwADAAQAAAAIAPb/AwADAAQAAAAIAPP/AwADAAQAAAAIAPH/AwADAAQAAAAIAPL/AwADAAQAAAAIAPD/AwADAAQAAAAHAO//AwADAAQAAAAHAO3/AwADAAQAAAAGAO3/AwADAAQAAAAHAOz/AwADAAQAAAAGAOv/AwADAAQAAAAGAOz/AwADAAQAAAAGAOr/AwADAAQAAAAFAOv/AwADAAQAAAAFAOn/AwADAAQAAAAFAOr/AwADAAQAAAAEAOv/AwADAAQAAAAEAOr/AwADAAQAAAADAOn/AwADAAQAAAADAOr/AwADAAQAAAACAOv/AwADAAQAAAACAOr/AwADAAQAAAABAOn/AwADAAQAAAABAOj/AwADAAQAAAACAOj/AwADAAQAAAABAOf/AwADAAQAAAAAAOf/AwADAAQAAAAAAOj/AwADAAQAAAD//+n/AwADAAQAAAD//+r/AwADAAQAAAD//+z/AwADAAQAAAD+/+v/AwADAAQAAAD//+v/AwADAAQAAAD+/+r/AwADAAQAAAD9/+n/AwADAAQAAAD+/+j/AwADAAQAAAD9/+f/AwADAAQAAAD8/+X/AwADAAQAAAD9/+j/AwADAAQAAAD8/+f/AwADAAQAAAD8/+j/AwADAAQAAAD7/+f/AwADAAQAAAD8/+n/AwADAAQAAAD9/+r/AwADAAQAAAD8/+r/AwADAAQAAAD8/+v/AwADAAQAAAD8/+z/AwADAAQAAAD7/+r/AwADAAQAAAD7/+n/AwADAAQAAAD7/+j/AwADAAQAAAAEAPr/AwADAAQAAAAEAPf/AwADAAQAAAAFAPj/AwADAAQAAAAEAPX/AwADAAQAAAAFAPb/AwADAAQAAAAEAPb/AwADAAQAAAAFAPT/AwADAAQAAAAEAPP/AwADAAQAAAAFAPL/AwADAAQAAAAGAPP/AwADAAQAAAAGAPL/AwADAAQAAAAGAPH/AwADAAQAAAAHAPD/AwADAAQAAAAAAPv/AwADAAQAAAD+//r/AwADAAQAAAD9//f/AwADAAQAAAD9//b/AwADAAQAAAD9//X/AwADAAQAAAD+//b/AwADAAQAAAACAO3/AwABAAYAAAADAPf/AwABAAYAAAA=")
+tile_map_data = PackedByteArray("AAACAPT/AwABAAQAAAD+/+7/AwACAAQAAAADAO//AwAAAAYAAAD9//T/AwAAAAYAAAACAAIAAwAAAAYAAAAAAPX/AwAAAAQAAAABAOz/AwACAAQAAAACAP7/AwADAAQAAAADAAUAAwADAAQAAAAEAAQAAwADAAQAAAADAAMAAwADAAQAAAAEAAIAAwADAAQAAAADAAEAAwADAAQAAAAEAAAAAwADAAQAAAADAP//AwADAAQAAAAEAP7/AwADAAQAAAAEAPz/AwADAAQAAAADAP3/AwADAAQAAAAEAPn/AwADAAQAAAAFAPv/AwADAAQAAAAGAPz/AwADAAQAAAAHAPz/AwADAAQAAAAGAPv/AwADAAQAAAAHAPr/AwADAAQAAAAHAPn/AwADAAQAAAAHAPj/AwADAAQAAAAHAPf/AwADAAQAAAAHAPb/AwADAAQAAAAHAPX/AwADAAQAAAAIAPT/AwADAAQAAAAIAPb/AwADAAQAAAAIAPP/AwADAAQAAAAIAPH/AwADAAQAAAAIAPL/AwADAAQAAAAIAPD/AwADAAQAAAAHAO//AwADAAQAAAAHAO3/AwADAAQAAAAGAO3/AwADAAQAAAAHAOz/AwADAAQAAAAGAOv/AwADAAQAAAAGAOz/AwADAAQAAAAGAOr/AwADAAQAAAAFAOv/AwADAAQAAAAFAOn/AwADAAQAAAAFAOr/AwADAAQAAAAEAOv/AwADAAQAAAAEAOr/AwADAAQAAAADAOn/AwADAAQAAAADAOr/AwADAAQAAAACAOv/AwADAAQAAAACAOr/AwADAAQAAAABAOn/AwADAAQAAAABAOj/AwADAAQAAAACAOj/AwADAAQAAAABAOf/AwADAAQAAAAAAOf/AwADAAQAAAAAAOj/AwADAAQAAAD//+n/AwADAAQAAAD//+r/AwADAAQAAAD//+z/AwADAAQAAAD+/+v/AwADAAQAAAD//+v/AwADAAQAAAD+/+r/AwADAAQAAAD9/+n/AwADAAQAAAD+/+j/AwADAAQAAAD9/+f/AwADAAQAAAD8/+X/AwADAAQAAAD9/+j/AwADAAQAAAD8/+f/AwADAAQAAAD8/+j/AwADAAQAAAD7/+f/AwADAAQAAAD8/+n/AwADAAQAAAD9/+r/AwADAAQAAAD8/+r/AwADAAQAAAD8/+v/AwADAAQAAAD8/+z/AwADAAQAAAD7/+r/AwADAAQAAAD7/+n/AwADAAQAAAD7/+j/AwADAAQAAAAEAPr/AwADAAQAAAAEAPf/AwADAAQAAAAFAPj/AwADAAQAAAAEAPX/AwADAAQAAAAFAPb/AwADAAQAAAAEAPb/AwADAAQAAAAFAPT/AwADAAQAAAAEAPP/AwADAAQAAAAFAPL/AwADAAQAAAAGAPP/AwADAAQAAAAGAPL/AwADAAQAAAAGAPH/AwADAAQAAAAHAPD/AwADAAQAAAAAAPv/AwADAAQAAAD+//r/AwADAAQAAAD9//f/AwADAAQAAAD9//b/AwADAAQAAAD9//X/AwADAAQAAAD+//b/AwADAAQAAAACAO3/AwABAAYAAAADAPf/AwABAAYAAAD//wEAAwAAAAYAAAA=")
 tile_set = SubResource("TileSet_jdofs")
 
 [node name="128" type="TileMapLayer" parent="."]
@@ -523,6 +570,28 @@ libraries = {
 }
 autoplay = "UpDown"
 script = ExtResource("7_2xy5j")
+
+[node name="NPC" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(306, -1042)
+script = ExtResource("12_qegge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
+position = Vector2(1.5, 25.75)
+shape = SubResource("RectangleShape2D_bg6or")
+
+[node name="Sprite" type="Sprite2D" parent="NPC"]
+texture_filter = 1
+texture = ExtResource("13_cfgnq")
+hframes = 18
+vframes = 5
+frame = 49
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NPC"]
+libraries = {
+&"": SubResource("AnimationLibrary_gp2gj")
+}
+autoplay = "NPC"
 
 [node name="Hielo" type="Area2D" parent="."]
 z_index = 1
@@ -662,10 +731,12 @@ scale = Vector2(0.87246, 0.880357)
 shape = SubResource("RectangleShape2D_2ctoe")
 
 [node name="Player" parent="." instance=ExtResource("1_odl16")]
+unique_name_in_owner = true
 position = Vector2(-110, 300)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2.5, 2.5)
+offset = Vector2(0, 20)
+zoom = Vector2(3, 3)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player"]
 position = Vector2(110, -300)
@@ -674,9 +745,16 @@ volume_db = 5.663
 autoplay = true
 max_distance = 4096.0
 
+[connection signal="body_entered" from="Bacardi" to="Harp" method="_on_bacardi_body_entered"]
 [connection signal="body_entered" from="Bacardi" to="Bacardi" method="_on_body_entered"]
+[connection signal="body_entered" from="NPC" to="NPC" method="_on_body_entered"]
+[connection signal="body_entered" from="Hielo" to="Harp" method="_on_hielo_body_entered"]
 [connection signal="body_entered" from="Hielo" to="Hielo" method="_on_body_entered"]
+[connection signal="body_entered" from="Mineral" to="Harp" method="_on_mineral_body_entered"]
 [connection signal="body_entered" from="Mineral" to="Mineral" method="_on_body_entered"]
+[connection signal="body_entered" from="Coca" to="Harp" method="_on_coca_body_entered"]
 [connection signal="body_entered" from="Coca" to="Coca" method="_on_body_entered"]
+[connection signal="body_entered" from="Vaso" to="Harp" method="_on_vaso_body_entered"]
 [connection signal="body_entered" from="Vaso" to="Vaso" method="_on_body_entered"]
 [connection signal="body_entered" from="Yate" to="Yate" method="_on_body_entered"]
+[connection signal="finished" from="Player/AudioStreamPlayer2D" to="Player" method="_on_audio_stream_player_2d_finished"]

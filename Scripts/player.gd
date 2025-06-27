@@ -1,15 +1,19 @@
 extends CharacterBody2D
 
 @onready var animation_tree: AnimationTree = $AnimationTree
-
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @export var move_speed: float = 200.0
 @export var acceleration: float = 55.0
-@export var fullscreen: bool = false
 
 var movement_direction: Vector2 = Vector2.ZERO
 
+
 func _ready() -> void:
-	animation_tree.active = true
+	animation_tree.active = true;
+	
+	DialogueManager.show_example_dialogue_balloon(load("res://item0.dialogue"));
+	
 
 func _physics_process(delta: float) -> void:
 	movement_direction = Vector2(Input.get_axis("izq","der"), Input.get_axis("atras","adelante"))
@@ -26,39 +30,6 @@ func _physics_process(delta: float) -> void:
 		animation_tree["parameters/conditions/not_moving"] = true
 	
 	animation_tree["parameters/Walk/blend_position"] = movement_direction
-	
-	
-func _on_fullscreen_released():
-	if fullscreen:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-	fullscreen = not fullscreen
-#var direction : Vector2 = Vector2()
 
-#func read_input():
-#	velocity = Vector2()
-	
-#	if Input.is_action_pressed("adelante"):
-#		velocity.y -= 1
-#		direction = Vector2(0, -1)
-		
-#	if Input.is_action_pressed("atras"):
-#		velocity.y += 1
-#		direction = Vector2(0, 1)
-	
-#	if Input.is_action_pressed("izq"):
-#		velocity.x -= 1
-#		direction = Vector2(-1, 0)
-#		$Sprite.flip_h = false
-		
-#	if Input.is_action_pressed("der"):
-#		velocity.x += 1
-#		direction = Vector2(1, 0)
-#		$Sprite.flip_h = true
-		
-#	velocity = velocity.normalized()
-#	velocity = move_and_slide(velocity * 200)
-	
-#func _physics_process(delta):
-#		read_input()
+func _on_audio_stream_player_2d_finished() -> void:
+	audio_player.play()
