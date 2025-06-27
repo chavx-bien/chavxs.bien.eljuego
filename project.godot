@@ -126,7 +126,6 @@ occlusion_culling/bvh_build_quality=0
 rendering_device/staging_buffer/max_size_mb=64
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-textures/vram_compression/import_etc2_astc=true
 textures/webp_compression/compression_method=4
 lights_and_shadows/directional_shadow/size=256
 lights_and_shadows/directional_shadow/size.mobile=256
