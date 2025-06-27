@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cevoakgjbh41v"]
 
 [ext_resource type="Script" uid="uid://cdgmt06v24brd" path="res://escenas/flecha.gd" id="1_0ndbe"]
-[ext_resource type="Texture2D" uid="uid://b50yj6aqyoix4" path="res://objetos/flecha2.png" id="2_o7mo6"]
+[ext_resource type="Texture2D" uid="uid://b2lnn0s4yn74q" path="res://objetos/flecha2.png" id="2_o7mo6"]
 
 [sub_resource type="Animation" id="Animation_2xy5j"]
 length = 0.001

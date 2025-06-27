@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
-[ext_resource type="Texture2D" uid="uid://ckfe61cvr2uxc" path="res://objetos/textbox.png" id="2_1337t"]
+[ext_resource type="Texture2D" uid="uid://c175kghhmxxmp" path="res://objetos/textbox.png" id="2_1337t"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="FontFile" uid="uid://bbb8bss2d7bk6" path="res://objetos/otf/PF Pixelscript Pro Regular.ttf" id="3_nlsx6"]
-[ext_resource type="AudioStream" uid="uid://bw0aqoyfd1mu6" path="res://objetos/good-bright-idea-2-game-multimedia-notify-SBA-300463025.wav" id="5_kmygl"]
+[ext_resource type="FontFile" uid="uid://dmj76sub0t7u7" path="res://objetos/otf/PF Pixelscript Pro Regular.ttf" id="3_nlsx6"]
+[ext_resource type="AudioStream" uid="uid://cx743ak0jo0s4" path="res://objetos/good-bright-idea-2-game-multimedia-notify-SBA-300463025.wav" id="5_kmygl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
